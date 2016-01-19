@@ -1,4 +1,4 @@
-angular.module('flapperNews')
+myApp
     .controller('PostsCtrl', [
         '$scope',
         '$stateParams',

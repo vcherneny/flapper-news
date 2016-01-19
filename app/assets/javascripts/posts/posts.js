@@ -1,4 +1,4 @@
-angular.module('flapperNews')
+myApp
     .factory('posts', [function() {
         return {
             posts: []
