@@ -10,7 +10,7 @@ Rails.application.routes.draw do
     end
 
     member do
-      put '/upvotes' => 'posts#upvote'
+      put '/upvote' => 'posts#upvote'
     end
   end
   # The priority is based upon order of creation: first created -> highest priority.

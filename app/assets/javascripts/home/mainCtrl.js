@@ -20,7 +20,7 @@ angular.module('flapperNews')
             }
 
             $scope.incrementUpvotes = function(post) {
-                post.upvotes += 1;
+                posts.upvote(post);
             }
         }]
     );
