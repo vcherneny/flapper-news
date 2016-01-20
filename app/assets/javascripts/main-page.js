@@ -3,14 +3,18 @@ var myApp = angular.module('flapperNews', ['ui.router', 'templates'])
         '$stateProvider',
         '$urlRouterProvider',
         function($stateProvider, $urlRouterProvider) {
-            debugger
-            $stateProvider
-            .state('home', {
+            $stateProvider.state('home', {
                 url: '/home',
                 templateUrl: 'home/_home.html',
+                resolve: {
+                    postPromise: ['posts', function(posts) {
+                        return posts.getAll();
+                    }]
+                },
                 controller: 'MainCtrl'
-            })
-            .state('posts', {
+            });
+
+            $stateProvider.state('posts', {
                 url: '/posts/{id}',
                 templateUrl: 'posts/_posts.html',
                 controller: 'PostsCtrl'
